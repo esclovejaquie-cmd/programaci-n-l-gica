@@ -1,10 +1,25 @@
-def factorial(n):
-    resultado = 1
+"""
+Autor: Tu nombre
+Fecha: 02/09/2026
+Aplicación: Factorial utilizando for
+"""
+
+
+def factorial_for(n):
+    """
+    Función para calcular el factorial mediante un ciclo for.
+
+    @param n: Recibe un número entero no negativo.
+    @return: Devuelve el factorial de n.
+             n! = n * (n-1) * (n-2) * ... * 1
+    """
+
+    factorial = 1
 
     for numero in range(1, n + 1):
-        resultado *= numero
+        factorial = factorial * numero
 
-    return resultado
+    return factorial
 
 
-print(factorial(3))
+print(factorial_for(3))
