@@ -1,0 +1,38 @@
+a: 02/09/2026
+Aplicación: Algoritmo de Euclides utilizando for
+"""
+
+
+def calcular_mcd(a, b):
+    """
+    Función para calcular el máximo común divisor con Euclides.
+
+    @param a: Primer número entero.
+    @param b: Segundo número entero.
+    @return: Máximo común divisor de a y b.
+    """
+
+    # Convierte los números negativos en positivos.
+    a = abs(a)
+    b = abs(b)
+
+    # Repite el proceso hasta que el residuo sea cero.
+    for i in range(b + 1):
+        if b == 0:
+            break
+
+        residuo = a % b
+        a = b
+        b = residuo
+
+    return a
+
+
+numero1 = int(input("Escribe el primer número: "))
+numero2 = int(input("Escribe el segundo número: "))
+
+mcd = calcular_mcd(numero1, numero2)
+
+print("El máximo común divisor es:", mcd)
+
+#Escribe el primer número: 48,Escribe el segundo número: 18,El máximo común divisor es: 6
