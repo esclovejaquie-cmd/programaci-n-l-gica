@@ -1,0 +1,34 @@
+"""
+Autor: Tu nombre
+Fecha: 02/09/2026
+Aplicación: Serie de Fibonacci utilizando recursión
+"""
+
+
+def fibonacci(n):
+    """
+    Función para calcular un número de Fibonacci mediante recursión.
+
+    @param n: Posición de la sucesión de Fibonacci.
+    @return: Número de Fibonacci correspondiente a la posición n.
+    """
+
+    # Casos base: detienen la recursión.
+    if n == 0:
+        return 0
+
+    if n == 1:
+        return 1
+
+    # Caso recursivo: suma los dos valores anteriores.
+    return fibonacci(n - 1) + fibonacci(n - 2)
+
+
+numero = int(input("Escribe una posición: "))
+
+if numero < 0:
+    print("La posición debe ser un número no negativo.")
+else:
+    resultado = fibonacci(numero)
+    print("El número de Fibonacci es:", resultado)
+    # Escribe una posición: 6,El número de Fibonacci es: 8
