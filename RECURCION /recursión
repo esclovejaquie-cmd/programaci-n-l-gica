@@ -1,0 +1,25 @@
+"""
+Autor: Tu nombre
+Fecha: 02/09/2026
+Aplicación: Factorial utilizando recursión
+"""
+
+
+def factorial_recursivo(n):
+    """
+    Función para calcular el factorial mediante recursión.
+
+    @param n: Recibe un número entero no negativo.
+    @return: Devuelve el factorial de n.
+             n! = n * (n-1) * (n-2) * ... * 1
+    """
+
+    # Caso base: detiene la recursión.
+    if n == 0 or n == 1:
+        return 1
+
+    # Caso recursivo: la función se llama a sí misma.
+    return n * factorial_recursivo(n - 1)
+
+
+print(factorial_recursivo(3))
