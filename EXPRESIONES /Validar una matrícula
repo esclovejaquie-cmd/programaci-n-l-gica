@@ -1,0 +1,22 @@
+# Importamos el módulo de expresiones regulares
+import re
+
+# Solicitamos la matrícula
+matricula = input("Ingresa una matrícula: ")
+
+# Este patrón exige exactamente 9 dígitos:
+#
+# ^ indica el inicio del texto
+# \d representa cualquier dígito del 0 al 9
+# {9} exige exactamente nueve dígitos
+# $ indica el final del texto
+#
+# Ejemplo de matrícula válida: 211150026
+patron = r"^\d{9}$"
+
+# Comprobamos si toda la matrícula cumple con el patrón
+if re.fullmatch(patron, matricula):
+    print("Matrícula válida")
+else:
+    print("Matrícula no válida")
+    print("La matrícula debe contener exactamente 9 dígitos")
