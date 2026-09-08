@@ -1,0 +1,19 @@
+# Importamos el módulo de expresiones regulares
+import re
+
+# Solicitamos el nombre de la persona
+nombre = input("Ingresa un nombre: ")
+
+# Este patrón permite:
+# - Letras mayúsculas y minúsculas
+# - Letras con acentos
+# - La letra ñ
+# - Espacios entre nombres y apellidos
+# - Una longitud de 2 a 50 caracteres
+patron = r"^[A-Za-zÁÉÍÓÚáéíóúÑñÜü ]{2,50}$"
+
+# Comprobamos si todo el nombre cumple con el patrón
+if re.fullmatch(patron, nombre):
+    print("Nombre válido")
+else:
+    print("Nombre no válido")
