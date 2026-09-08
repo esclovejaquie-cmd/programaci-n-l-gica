@@ -1,0 +1,18 @@
+# Importamos el módulo para trabajar con expresiones regulares
+import re
+
+# Solicitamos el correo electrónico
+correo = input("Ingresa un correo electrónico: ")
+
+# Este patrón comprueba:
+# - Un nombre antes del símbolo @
+# - El símbolo @
+# - Un dominio
+# - Una extensión de al menos dos letras
+patron = r"^[\w.-]+@[\w.-]+\.[a-zA-Z]{2,}$"
+
+# fullmatch verifica que todo el correo cumpla con el patrón
+if re.fullmatch(patron, correo):
+    print("Correo válido")
+else:
+    print("Correo no válido")
