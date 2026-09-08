@@ -1,0 +1,18 @@
+# Importamos el módulo de expresiones regulares
+import re
+
+# Solicitamos la contraseña
+contrasena = input("Ingresa una contraseña: ")
+
+# Este patrón exige:
+# - Un mínimo de 8 caracteres
+# - Al menos una letra mayúscula
+# - Al menos un número
+# - Al menos un carácter especial, como #, @, ! o $
+patron = r"^(?=.*[A-Z])(?=.*\d)(?=.*[^\w\s]).{8,}$"
+
+# Comprobamos si la contraseña cumple con todos los requisitos
+if re.fullmatch(patron, contrasena):
+    print("Contraseña segura")
+else:
+    print("La contraseña no cumple con los requisitos")
