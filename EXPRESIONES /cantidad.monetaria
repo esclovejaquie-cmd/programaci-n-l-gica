@@ -1,0 +1,18 @@
+# Importamos el módulo de expresiones regulares
+import re
+
+# Solicitamos la cantidad monetaria
+cantidad = input("Ingresa una cantidad monetaria: ")
+
+# Este patrón acepta cantidades como:
+# 100
+# 1,250
+# 1,250.50
+# 999,999.99
+patron = r"^\d{1,3}(?:,\d{3})*(?:\.\d{2})?$"
+
+# Comprobamos si la cantidad cumple con el formato
+if re.fullmatch(patron, cantidad):
+    print("Cantidad monetaria válida")
+else:
+    print("Cantidad monetaria no válida")
