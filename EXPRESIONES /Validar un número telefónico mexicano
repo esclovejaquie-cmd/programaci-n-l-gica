@@ -1,0 +1,19 @@
+# Importamos el módulo de expresiones regulares
+import re
+
+# Solicitamos el número telefónico
+telefono = input("Ingresa un teléfono con el prefijo +52: ")
+
+# Este patrón exige:
+# - El prefijo mexicano +52
+# - Exactamente 10 dígitos después del prefijo
+#
+# La diagonal invertida permite interpretar el signo + literalmente
+patron = r"^\+52\d{10}$"
+
+# Comprobamos si todo el teléfono cumple con el patrón
+if re.fullmatch(patron, telefono):
+    print("Teléfono válido")
+else:
+    print("Teléfono no válido")
+    print("Ejemplo: +525512345678")
