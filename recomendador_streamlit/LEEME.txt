@@ -1,0 +1,12 @@
+RECOMENDADOR EN STREAMLIT
+
+1. Instala Python 3.10 o superior compatible con Streamlit.
+2. Extrae este ZIP y abre una terminal en esa carpeta.
+3. Ejecuta: python -m pip install -r requirements.txt
+4. Coloca tu base_conocimiento.json original junto a app.py.
+   También puedes subir el JSON desde la barra lateral de la aplicación.
+5. Ejecuta: python -m streamlit run app.py
+
+La base JSON no estaba en el código proporcionado, por lo que no se incluye.
+Se conserva el motor de reglas, las exclusiones y el orden de recomendaciones.
+El código contiene comentarios en español.
